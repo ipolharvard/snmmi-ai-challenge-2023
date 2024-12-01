@@ -1,0 +1,4 @@
+[submodule "ospkg/external/auton_survival"]
+	path = ospkg/external/auton_survival
+	url = git@github.com:autonlab/auton-survival.git
+	commit = ee77a7bbe3576b4a91bc548ced2cf6b4395ff0c5

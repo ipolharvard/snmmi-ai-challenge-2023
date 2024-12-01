@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "os"
+version = "0.0.2"
+description = "Overall Surivival experiments based on the PyCox library"
+readme = "README.md"
+authors = [
+    { name = "Pawel Renc", email = "prenc@mgh.harvard.edu" },
+    { name = "Arkadiusz Sitek", email = "asitek@mgh.harvard.edu" },
+]
+maintainers = [
+    { name = "Pawel Renc", email = "prenc@mgh.harvard.edu" },
+]
+requires-python = ">=3.10"
+dependencies = [
+    "click~=8.1.7",
+    "imbalanced-learn",
+    "lifelines~=0.30.0",
+    "openpyxl",
+    "optuna~=3.5.0",
+    "pandas~=2.2.3",
+    "pycox~=0.3.0",
+    "scikit-survival",
+    "torch~=2.2.1",
+    "tqdm~=4.66.1",
+    "numba~=0.60.0",
+]
+
+[project.optional-dependencies]
+jupyter = ["jupyter", "seaborn~=0.13.2", "pytest-xdist", "matplotlib~=3.9.2"]
+dev = ["pre-commit~=3.8.0", "pytest"]
+
+[project.scripts]
+os = "ospkg.cli:run_cli"
+
+[tool.setuptools]
+packages = ["ospkg"]
+
+[tool.setuptools.package-data]
+"ospkg.data" = ["*.csv"]
