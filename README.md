@@ -86,9 +86,7 @@ An example configuration and script to run an experiment can be found in the tes
 This provides a reference for setting up and executing your own experiments.
 Or available models you can find at `ospkg/constants`.
 
-```bash
-
 ## Acknowledgments
+
 We thank the organizers of the SNMMI AI Challenge 2023 and the contributors of the Pycox library for
 their excellent work.
-```
